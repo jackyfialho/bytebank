@@ -19,5 +19,11 @@ export class NovaTransferenciaComponent implements OnInit {
     console.log('solicitado nova transferência');
     const valorEmitir = { valor: this.valor, destino: this.destino };
     this.aoTransferir.emit(valorEmitir);
+    this.limparCampos();
+  }
+
+  limparCampos() {
+    this.valor = undefined;
+    this.destino = undefined;
   }
 }
